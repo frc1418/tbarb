@@ -1,2 +1,2 @@
 # tba.rb
-API to get data from The Blue Alliance
+Unofficial Ruby API to get data from The Blue Alliance.
