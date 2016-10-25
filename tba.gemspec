@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name        = 'tba'
-    s.version     = '0.1.0'
+    s.version     = '0.2.0'
     s.date        = '2016-10-25'
     s.summary     = 'A'
     s.description = 'A simple set of functions to easily fetch data from The Blue Alliance.'
