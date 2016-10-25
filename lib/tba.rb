@@ -23,16 +23,60 @@ module TBA
         fetch('team/frc' + team + '/' + year)
     end
 
-    def TBA.get_team_awards(team, event)
-        if event
-            fetch('team/frc' + team + '/event/' + event + '/awards')
+    def TBA.get_team_awards(team, *event)
+        if event[0]
+            fetch('team/frc' + team.to_s + '/event/' + event[0] + '/awards')
         else
-            fetch('team/frc' + team)
+            fetch('team/frc' + team.to_s)
         end
     end
 
-    def TBA.get_event(key)
-        fetch('event/' + key)
+    def TBA.get_team_matches(team, event)
+        fetch('team/frc' + team + '/event/' + event + '/matches')
+    end
+
+    def TBA.get_team_years(team)
+        fetch('team/frc' + team + '/years_participated')
+    end
+
+    def TBA.get_team_media(team, *year)
+        if year[0]
+            fetch('team/frc' + team.to_s + '/' + year[0].to_s + '/media')
+        else
+            fetch('team/frc' + team.to_s + '/media')
+        end
+    end
+
+    def TBA.get_team_history_events(team)
+        fetch('team/frc' + team + '/history/events')
+    end
+
+    def TBA.get_team_history_awards(team)
+        fetch('team/frc' + team + '/history/awards')
+    end
+
+    def TBA.get_team_history_robots(team)
+        fetch('team/frc' + team + '/history/robots')
+    end
+
+    def TBA.get_team_history_districts(team)
+        fetch('team/frc' + team + '/history/districts')
+    end
+
+    def TBA.get_event_list(*year)
+        if year[0]
+            fetch('events/' + year)
+        else
+            fetch('events/')
+        end
+    end
+
+    def TBA.get_event(event)
+        fetch('event/' + event)
+    end
+
+    def TBA.get_event_teams(event)
+        fetch('event/' + event + '/teams')
     end
 
     def TBA.get_event_stats(event)
