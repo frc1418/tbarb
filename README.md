@@ -45,6 +45,8 @@ These functions should all be preceded by `tba.` (replace with your instance's n
 * `get_district_rankings(district, year)` - Get the rankings in a district.
 * `get_district_teams(district, year)` - Get a list of the teams in a district.
 
+See `example.rb` for a usage example.
+
 Documentation for The Blue Alliance's API can be found [here](https://www.thebluealliance.com/apidocs).
 
 ## Authors
