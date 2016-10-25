@@ -1,4 +1,7 @@
 # tba.rb
+
+[![Gem Version](https://badge.fury.io/rb/tba.svg)](https://badge.fury.io/rb/tba)
+
 Unofficial Ruby API to get data from The Blue Alliance.
 
 This API returns JSON-parsed data fetched from The Blue Alliance's API.
