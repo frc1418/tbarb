@@ -25,14 +25,14 @@ class TBA
     end
 
     def get_team_events(team, year)
-        fetch("team/frc#{team}/#{year}")
+        fetch("team/frc#{team}/#{year}/events")
     end
 
     def get_team_awards(team, *event)
         if event[0]
             fetch("team/frc#{team}/event/#{event[0]}/awards")
         else
-            fetch("team/frc#{team}")
+            fetch("team/frc#{team}/awards")
         end
     end
 
