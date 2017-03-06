@@ -6,6 +6,23 @@ Unofficial Ruby API to get data from The Blue Alliance.
 
 This API returns JSON-parsed data fetched from The Blue Alliance's API.
 
+## Installation
+
+Add `tba.rb` to your Gemfile.
+```ruby
+gem 'tba'
+```
+and then run 
+```bash
+bundle install
+```
+in the same directory as the Gemfile.
+
+or manually install using this command
+```bash
+gem install tba
+```
+
 ## Setup
 To use these functions, you must require the `tba` gem:
 
