@@ -4,11 +4,11 @@ require 'json'
 
 class TBA
 
-    @@API_ROOT = 'https://www.thebluealliance.com/api/v2/'
-    @api_key = ''
+    @@API_ROOT = 'https://www.thebluealliance.com/api/v3/'
+    @auth_key = ''
 
     def initialize(key)
-        @api_key = key
+        @auth_key = key
     end
 
     def get(path)
@@ -16,11 +16,10 @@ class TBA
 
         Net::HTTP.start(uri.host, uri.port,
             :use_ssl => uri.scheme == 'https') do |http|
-            request = Net::HTTP::Get.new(uri)
-            request.add_field("X-TBA-App-Id", @api_key)
+            req = Net::HTTP::Get.new(uri)
+            req.add_field('X-TBA-Auth-Key', @auth_key)
 
-            response = http.request request # Net::HTTPResponse object
-            return JSON.parse(response.body)
+            return JSON.parse(http.request(req).body)
         end
     end
 
