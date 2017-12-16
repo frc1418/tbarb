@@ -1,32 +1,34 @@
-# tba.rb
+# tbarb [![Gem Version](https://badge.fury.io/rb/tbarb.svg)](https://badge.fury.io/rb/tbarb)
+_1418 TBA Libraries_ // [Python](https://github.com/frc1418/tbapy) // [Go](https://github.com/frc1418/tbago) // [**Ruby**](https://github.com/frc1418/tbarb)
 
-[![Gem Version](https://badge.fury.io/rb/tba.svg)](https://badge.fury.io/rb/tba)
+> Ruby library for interfacing with [The Blue Alliance](https://thebluealliance.com) [API](https://thebluealliance.com/apidocs) (v3).
 
-Unofficial Ruby API to get data from The Blue Alliance.
+## NOTE: `tba` vs `tbarb`, v3, and breaking changes
+On January 1st, 2018, v2 of The Blue Alliance's API was folded in favor of the new v3. The API supports numerous new and helpful features, however it uses endpoints which are incompatible with libraries designed for v2.
 
-This API returns JSON-parsed data fetched from The Blue Alliance's API.
+A related note on naming: Prior to the v3 update, this package was known as `tba.rb` on git and `tba` in RubyGems. As part of the rewrite required for the new API, the name of this package was changed to `tbarb`, both on git and RubyGems. The old package is still available through RubyGems as `tba`, however this is not recommended as the package is not functional after 2017.
 
 ## Installation
 
-Add `tba.rb` to your Gemfile.
+Add `tbarb` to your Gemfile.
 ```ruby
 gem 'tba'
 ```
-and then run 
+and then run
 ```bash
 bundle install
 ```
 in the same directory as the Gemfile.
 
-or manually install using this command
+Or install directly from RubyGems:
 ```bash
-gem install tba
+gem install tbarb
 ```
 
 ## Setup
 To use these functions, you must require the `tba` gem:
 
-    require 'tba'
+    require 'tbarb'
 
 Before using the API, you must instantiate the class, providing your application's ID in the format `author:application:version`, for example:
 
