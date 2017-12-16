@@ -1,4 +1,4 @@
-require 'tba'
+require './lib/main'
 
 tba = TBA.new('frc1418:tba_example:v1.0')
 

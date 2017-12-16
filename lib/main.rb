@@ -4,16 +4,16 @@ require 'json'
 
 class TBA
 
-    @@URL_PRE = 'https://www.thebluealliance.com/api/v2/'
+    @@API_ROOT = 'https://www.thebluealliance.com/api/v2/'
     @@URL_POST = '?X-TBA-App-Id='
-    @app_id = ''
+    @api_key = ''
 
     def initialize(id)
         @app_id = id
     end
 
     def fetch(url)
-        JSON.parse(Net::HTTP.get(URI.parse(@@URL_PRE + url + @@URL_POST + @app_id)))
+        JSON.parse(Net::HTTP.get(URI.parse(@@API_ROOT + url + @@URL_POST + @app_id)))
     end
 
     def get_teams(index)
