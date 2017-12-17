@@ -5,7 +5,7 @@ require './lib/main'
 tba = TBA.new('AykWePEZPKTjZxW6y7MbiTEpTfUlWrszcX5QBpIDUEZPBCJydltvhfd88MsBXxdS')
 
 team = tba.team(254)
-districts = tba.team_districts(1418, 2016)
-
 puts "Team 254 is from #{team['city']}."
-puts "Team 1418 was in the #{districts[0]['name']} district last year."
+
+districts = tba.team_districts(1418)
+puts "Team 1418 is in the #{districts[-1]['display_name']} district."
