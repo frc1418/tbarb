@@ -23,4 +23,12 @@ class TBA
         end
     end
 
+    def team_key(identifier)
+        return identifier.is_a?(Integer) ? "frc#{identifier}" : identifier
+    end
+
+    def team(number)
+        get("team/#{team_key(number)}")
+    end
+
 end
