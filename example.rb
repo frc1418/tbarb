@@ -1,9 +1,11 @@
 require './lib/main'
 
-tba = TBA.new('frc1418:tba_example:v1.0')
+# You should not use this token in your own projects.
+# See the README for instructions on getting your own token from TBA.
+tba = TBA.new('AykWePEZPKTjZxW6y7MbiTEpTfUlWrszcX5QBpIDUEZPBCJydltvhfd88MsBXxdS')
 
-team = tba.get_team(254)
-districts = tba.get_team_history_districts(1418)
+team = tba.team(254)
+districts = tba.team_districts(1418, 2016)
 
-puts "Team 254 is from #{team['location']}."
-puts "Team 1418 was in the #{districts.first[1]} district last year."
+puts "Team 254 is from #{team['city']}."
+puts "Team 1418 was in the #{districts[0]['name']} district last year."
