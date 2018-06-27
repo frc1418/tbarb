@@ -30,12 +30,15 @@ gem install tbarb
 ## Setup
 To use these functions, you must require the `tba` gem:
 
-    require 'tbarb'
+```ruby
+require 'tbarb'
+```
 
 Before using the API, you must instantiate the class, providing a valid TBA auth key. You can obtain one [here](https://www.thebluealliance.com/account).
 
-    tba = TBA.new('key')
-
+```ruby
+tba = TBA.new('key')
+```
 
 ## Retrieval Functions
 You may specify `simple` as `true` to get only vital data on some models or lists of models, or you may specify `keys` as `true` to get a list of the keys for a list rather than full data on each model. It is recommended to use these options if you do not need full data.
